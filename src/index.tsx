@@ -1,22 +1,36 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Application } from './application';
 import { ShowsProvider } from './providers';
+import { Home, Info } from "./pages";
+import { Layout } from './components';
 
 import './index.css'
 
-const root = createRoot(document.getElementById('root')!)
+const HomeRoute = {
+  path: '/',
+  element: <Home />
+}
 
-const node = (
+const InfoRoute = {
+  path: '/:id',
+  element: <Info />
+}
+
+const routeList = [{
+  element: <Layout />,
+  children: [HomeRoute, InfoRoute]
+}]
+
+const router = createBrowserRouter(routeList)
+const container = document.getElementById('root')!
+const root = createRoot(container)
+
+root.render(
   <StrictMode>
-    <BrowserRouter>
-      <ShowsProvider>
-        <Application />
-      </ShowsProvider>
-    </BrowserRouter>
-  </StrictMode>
-)
-
-root.render(node)
+    <ShowsProvider>
+      <RouterProvider router={router} />
+    </ShowsProvider>
+  </StrictMode >
+);

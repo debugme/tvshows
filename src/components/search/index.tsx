@@ -20,8 +20,9 @@ export const Search: FC<SearchProps> = (props) => {
     , [searchTerm, setSearchTerm]);
 
   return (
-    <div className="relative w-full sm:w-3/4 sm:mx-auto mt-2">
+    <label className="relative w-full sm:w-3/4 sm:mx-auto mt-2" htmlFor="searchBox">
       <input
+        id="searchBox"
         className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-10 rounded-md border-none outline-slate-400"
         type="search"
         placeholder="Search titles"
@@ -30,6 +31,6 @@ export const Search: FC<SearchProps> = (props) => {
         onChange={onChange}
       />
       <MagnifyingGlassIcon className="absolute top-4 left-2 w-6 h-6 color-slate-700" />
-    </div>
+    </label>
   )
 }

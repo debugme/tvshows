@@ -1,3 +1,21 @@
+export type Nullable<T> = T | null
+
+export type SWRValue = {
+  isLoading: boolean,
+  failure: Nullable<Error>  
+}
+
+export type ShowItem = {
+  show: ShowInfo
+}
+
+export type ShowsValue = SWRValue & {
+  searchTerm: string,
+  setSearchTerm: (searchTerm: string) => void,
+  showList: Show[],
+  setShowList: (showList: Show[]) => void  
+}
+
 export type ShowInfo = {
   show: {
     id: string;
@@ -10,10 +28,6 @@ export type ShowInfo = {
   }
 }
 
-export type ShowItem = {
-  show: ShowInfo
-}
-
 export type Show = {
   id: string;
   name: string;
@@ -22,13 +36,42 @@ export type Show = {
   summary: string;
 }
 
-export type ShowsValue = {
-  searchTerm: string,
-  setSearchTerm: (searchTerm: string) => void,
-  showList: Show[],
-  setShowList: (showList: Show[]) => void  
-  isLoading: boolean,
-  failure: Nullable<Error>
+export type CastValue = SWRValue & {
+  castList: Cast[]
+  setCastList: (castList: Cast[]) => void
 }
 
-export type Nullable<T> = T | null
+export type CastInfo = {
+  person: {
+    id: string,
+    name: string,
+    image: {
+      medium: string
+    }
+  }
+}
+
+export type Cast = {
+  id: string,
+  name: string,
+  image: string
+}
+
+export type SeasonsValue = SWRValue & {
+  seasonList: Season[]
+  setSeasonList: (seasonList: Season[]) => void
+}
+
+export type SeasonInfo = {
+  id: string,
+  number: number,
+  image?: {
+    medium: string
+  }
+}
+
+export type Season = {
+  id: string
+  name: string,
+  image: string
+}

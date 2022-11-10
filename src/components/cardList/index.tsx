@@ -1,11 +1,8 @@
-import { FC, PropsWithChildren } from "react"
-
+import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
 import { Show } from "../../common"
-
 import { Card } from ".."
-
 import { Begin } from "./begin"
 import { Empty } from "./empty"
 

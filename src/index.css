@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --space-60: 60px;
+  --space-72: 72px;
 }
 
 body {
@@ -14,5 +14,11 @@ body {
 #root {
   height: 100%;
   display: grid;
-  grid-template-rows: var(--space-60) 1fr var(--space-60);
+  grid-template-rows: var(--space-72) 1fr var(--space-72);
 }
+
+input[type="search"]::-webkit-search-cancel-button { 
+  display: none; 
+}
+
+

@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { Show, ShowsValue } from "../../common";
-import { useShowAPI } from "../../hooks";
+import { useShowsAPI } from "../../hooks";
 
 const initialValue = {
   searchTerm: "",
@@ -34,7 +34,7 @@ export const ShowsProvider: FC<PropsWithChildren> = (props) => {
   const [isLoading, setIsLoading] = useState(initialIsLoading)
   const [failure, setFailure] = useState(initialFailure)
 
-  const { data, error, loading } = useShowAPI(searchTerm)
+  const { data, error, loading } = useShowsAPI(searchTerm)
 
   useEffect(() => {
     if (data)
@@ -43,7 +43,6 @@ export const ShowsProvider: FC<PropsWithChildren> = (props) => {
       setFailure(error)
     setIsLoading(loading)
   }, [data, error, loading])
-
 
   const value = {
     searchTerm,

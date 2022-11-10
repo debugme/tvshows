@@ -17,19 +17,19 @@ export const Search: FC<SearchProps> = (props) => {
 
   const onChange = useMemo(
     () => debounce(changeHandler, 300)
-  , [searchTerm, setSearchTerm]);
+    , [searchTerm, setSearchTerm]);
 
   return (
     <div className="relative w-full sm:w-3/4 sm:mx-auto mt-2">
       <input
-        className="bg-slate-100 w-full py-3 pl-10 rounded-md border-none cursor-pointer outline-slate-400"
+        className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-10 rounded-md border-none outline-slate-400"
         type="search"
         placeholder="Search titles"
         title="Type in a search term"
         defaultValue={searchTerm}
         onChange={onChange}
       />
-      <MagnifyingGlassIcon className="absolute top-3 left-2 w-6 h-6 color-slate-700" />
+      <MagnifyingGlassIcon className="absolute top-4 left-2 w-6 h-6 color-slate-700" />
     </div>
   )
 }

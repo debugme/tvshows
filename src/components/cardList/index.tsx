@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
-import { Show } from "../../common"
+import { Show } from "../../types"
 import { Card } from ".."
 import { Begin } from "./begin"
 import { Empty } from "./empty"

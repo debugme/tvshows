@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { uniqBy } from "lodash-es"
 
-import { Cast, CastInfo } from "../../common";
+import { Cast, CastInfo } from "../../types";
 
 const buildCast = (info: CastInfo) => {
   const { person: { id, name, image: { medium: image } } } = info

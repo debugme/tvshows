@@ -7,7 +7,7 @@ import {
   useEffect,
 } from "react";
 
-import { Show, ShowsValue } from "../../common";
+import { Show, ShowsValue } from "../../types";
 import { useShowsAPI } from "../../hooks";
 
 const initialValue = {

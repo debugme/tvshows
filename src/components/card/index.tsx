@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 
-import { Show } from "../../common"
+import { Show } from "../../types"
 import { ChipList } from ".."
 
 export type CardProps = Show

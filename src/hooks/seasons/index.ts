@@ -1,6 +1,6 @@
 import useSWR from "swr";
 
-import { Season, SeasonInfo } from "../../common";
+import { Season, SeasonInfo } from "../../types";
 
 const buildSeason = (info: SeasonInfo) => {
   const { id, number, image: _image } = info

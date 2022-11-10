@@ -29,15 +29,15 @@ export const CastList: FC<CastListProps> = (props) => {
             <span className="text-5xl text-slate-400">?</span>
           </div>
         }
-        <p className="flex justify-center px-1 py-1 rounded-lg mt-2 drop-shadow-md">{name}</p>
+        <p className="flex justify-center px-1 py-1 rounded-lg mt-2">{name}</p>
       </div>
     )
   })
 
   return (
     <section>
-      <h2 className="text-2xl text-slate-600 px-2 py-2 rounded-lg w-20 flex justify-center">Cast</h2>
-      <div className="mt-6 flex flex-wrap gap-8">
+      <h2 className="text-2xl text-slate-600 w-20">Cast</h2>
+      <div className="mt-6 flex flex-wrap gap-8 justify-around">
         {castList}
       </div>
     </section>

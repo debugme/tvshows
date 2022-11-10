@@ -1,6 +1,6 @@
 import useSWR from "swr";
 
-import { Show, ShowInfo } from "../../common";
+import { Show, ShowInfo } from "../../types";
 
 const buildShow = (info: ShowInfo) => {
   const { show: { id, name, summary, genres, image: { medium: image } } } = info

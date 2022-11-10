@@ -29,14 +29,14 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
             <span className="text-5xl text-slate-400">?</span>
           </div>
         }
-        <p className="flex justify-center px-1 py-1 rounded-lg mt-2 drop-shadow-md">{name}</p>
+        <p className="flex justify-center px-1 py-1 rounded-lg mt-2">{name}</p>
       </div>
     )
   })
 
   return (
     <section>
-      <h2 className="text-2xl text-slate-600 px-2 py-2 rounded-lg w-20 flex justify-center">Seasons</h2>
+      <h2 className="text-2xl text-slate-600 w-20">Seasons</h2>
       <div className="mt-6 flex flex-wrap gap-8">
         {seasonsList}
       </div>

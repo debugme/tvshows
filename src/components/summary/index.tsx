@@ -14,7 +14,7 @@ export const Summary: FC<SummaryProps> = (props) => {
   } = props
 
   return (
-    <article className="grid grid-cols-3 auto-rows-min ">
+    <article className="col-span-3 grid grid-cols-3 auto-rows-min">
       <figure>
         <img className="rounded-lg col-span-1" src={image} alt={name} />
       </figure>

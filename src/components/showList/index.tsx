@@ -6,12 +6,13 @@ import { Card } from ".."
 import { Begin } from "./begin"
 import { Empty } from "./empty"
 
-export type CardListProps = {
-  searchTerm: string;
+export type ShowListProps = {
+  searchTerm: string
   showList: Show[]
+  isLoading: boolean
 }
 
-export const CardList: FC<CardListProps> = (props) => {
+export const ShowList: FC<ShowListProps> = (props) => {
   const { searchTerm, showList } = props
 
   if (isEmpty(searchTerm)) {

@@ -3,7 +3,8 @@ import useSWR from "swr";
 import { Show, ShowInfo } from "../../types";
 
 const buildShow = (info: ShowInfo) => {
-  const { show: { id, name, summary, genres, image: { medium: image } } } = info
+  const { show: { id, name, summary, genres, image: _image } } = info
+  const image = _image?.medium || ""
   const show = { id, name, genres, image, summary }
   return show
 }
@@ -22,6 +23,6 @@ export const useShowsAPI = (searchTerm: string) => {
   const response = useSWR(endpoint, fetcher)
   const { data, error } = response
   const loading = Boolean(data && !error)
-  const results = { data, error, loading }  
+  const results = { data: data || [], error, loading }  
   return results
 }

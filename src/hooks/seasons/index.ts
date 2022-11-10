@@ -22,6 +22,6 @@ export const useSeasonsAPI = (showId: string) => {
   const response = useSWR(endpoint, fetcher)
   const { data, error } = response
   const loading = Boolean(!data && !error)
-  const results = { data, error, loading }
+  const results = { data: data || [], error, loading }
   return results
 }

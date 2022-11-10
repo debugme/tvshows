@@ -22,21 +22,24 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
   const seasonsList = data!.map((info) => {
     const { id, name, image } = info
     return (
-      <div key={id}>
-        <h1>{name}</h1>
+      <div className="rounded-lg" key={id}>
         {image
-          ? <img src={image} alt={name} />
-          : <div className="grid place-content-center bg-slate-800 w-[210px] h-[295px]">
+          ? <img className="rounded-lg" src={image} alt={name} />
+          : <div className="rounded-lg grid place-content-center bg-slate-800 w-[210px] h-[295px]">
             <span className="text-5xl text-slate-400">?</span>
           </div>
         }
+        <p className="flex justify-center px-1 py-1 rounded-lg mt-2 drop-shadow-md">{name}</p>
       </div>
     )
   })
 
   return (
     <section>
-      {seasonsList}
+      <h2 className="text-2xl text-slate-600 px-2 py-2 rounded-lg w-20 flex justify-center">Seasons</h2>
+      <div className="mt-6 flex flex-wrap gap-8">
+        {seasonsList}
+      </div>
     </section>
   )
 }

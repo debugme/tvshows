@@ -8,7 +8,7 @@ export const Info = () => {
   const showId = props.id
 
   return (
-    <section className="border h-full">
+    <section className="border h-full w-3/4 mx-auto">
       <Back />
       <Summary {...props} />
       <CastList showId={showId} />

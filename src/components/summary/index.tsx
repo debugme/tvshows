@@ -1,7 +1,6 @@
-import { FC, Fragment } from "react"
+import { FC } from "react"
 
 export type SummaryProps = {
-  id: string,
   name: string,
   image: string,
   summary: string
@@ -9,19 +8,16 @@ export type SummaryProps = {
 
 export const Summary: FC<SummaryProps> = (props) => {
   const {
-    id,
     name,
     image,
     summary,
-  } = props  
+  } = props
 
   return (
-    <Fragment>
-      <h1>Info</h1>
-      <h3>{id}</h3>
-      <h3>{name}</h3>
-      <h3>{image}</h3>
-      <h3 dangerouslySetInnerHTML={{ __html: summary }}></h3>
-    </Fragment>
+    <article className="grid grid-cols-3 auto-rows-min ">
+      <figure><img className="col-span-1" src={image} alt={name} /></figure>
+      <figcaption><p className="col-span-2">{name}</p></figcaption>
+      <summary className="col-span-3" dangerouslySetInnerHTML={{ __html: summary }} />
+    </article>
   )
 }

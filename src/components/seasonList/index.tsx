@@ -26,7 +26,7 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
         {image
           ? <img className="rounded-lg" src={image} alt={name} />
           : <article className="rounded-lg grid place-content-center bg-slate-800 w-[210px] h-[295px]">
-            <article className="text-5xl text-slate-400">?</article>
+            <article className="rounded-lg text-5xl text-slate-400">?</article>
           </article>
         }
         <figcaption className="flex justify-center px-1 py-1 rounded-lg mt-2">{name}</figcaption>
@@ -35,9 +35,9 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
   })
 
   return (
-    <section>
-      <header><h2 className="text-2xl text-slate-600 w-20">Seasons</h2></header>
-      <main className="mt-6 flex flex-wrap gap-8">
+    <section className="mt-8">
+      <header><h2 className="text-3xl text-slate-600 w-20">Seasons</h2></header>
+      <main className="mt-6 grid grid-cols-cast justify-around gap-8">
         {seasonsList}
       </main>
     </section>

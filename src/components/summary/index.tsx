@@ -15,9 +15,13 @@ export const Summary: FC<SummaryProps> = (props) => {
 
   return (
     <article className="grid grid-cols-3 auto-rows-min ">
-      <figure><img className="col-span-1" src={image} alt={name} /></figure>
-      <figcaption><p className="col-span-2">{name}</p></figcaption>
-      <summary className="col-span-3" dangerouslySetInnerHTML={{ __html: summary }} />
+      <figure>
+        <img className="rounded-lg col-span-1" src={image} alt={name} />
+      </figure>
+      <figcaption className="col-span-2 flex flex-col justify-end">
+        <p className="pl-8 text-5xl">{name}</p>
+      </figcaption>
+      <summary className="col-span-3 py-4" dangerouslySetInnerHTML={{ __html: summary }} />
     </article>
   )
 }

@@ -24,13 +24,13 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
   if (isEmpty(data))
     return null
 
-  const seasonsList = data.map((info) => <SeasonCard key={info.id} {...info} />)
+  const cardList = data.map((info) => <SeasonCard key={info.id} {...info} />)
 
   return (
     <section className="col-span-4 mt-8">
       <header><h2 className="text-3xl text-slate-600 w-20">Seasons</h2></header>
       <main className="mt-6 grid grid-cols-cast justify-between gap-8">
-        {seasonsList}
+        {cardList}
       </main>
     </section>
   )

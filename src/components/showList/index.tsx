@@ -2,7 +2,7 @@ import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
 import { Show } from "../../types"
-import { Card, LoadingShowList, NoResult, NoSearch } from ".."
+import { ShowCard, LoadingShowList, NoResult, NoSearch } from ".."
 
 export type ShowListProps = {
   searchTerm: string
@@ -25,7 +25,7 @@ export const ShowList: FC<ShowListProps> = (props) => {
     return <LoadingShowList />
   }
 
-  const cardList = showList.map((show) => <Card key={show.id} {...show} />)
+  const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
 
   return (
     <section

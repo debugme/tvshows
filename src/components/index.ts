@@ -1,5 +1,5 @@
 export { Back } from "./back"
-export { Card } from "./card"
+export { ShowCard } from "./showCard"
 export { CastCard } from "./castCard"
 export { CastList } from "./castList"
 export { Chip } from "./chip"

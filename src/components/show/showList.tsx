@@ -25,7 +25,6 @@ export const ShowList: FC<ShowListProps> = (props) => {
     return <NoResult />
   }
 
-
   const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
 
   return (

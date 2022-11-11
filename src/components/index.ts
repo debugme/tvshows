@@ -2,6 +2,8 @@ export { Back } from "./back"
 
 export { CastCard } from "./cast/castCard"
 export { CastList } from "./cast/castList"
+export { LoadingCast } from "./cast/loadingCast"
+export { LoadingCastList } from "./cast/loadingCastList"
 
 export { Chip } from "./chip/chip"
 export { ChipList } from "./chip/chipList"

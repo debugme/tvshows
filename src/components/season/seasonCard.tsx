@@ -14,7 +14,9 @@ export const SeasonCard: FC<SeasonCardProps> = (props) => {
           <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
         </article>
       }
-      <figcaption className="flex px-1 py-1 rounded-lg mt-2">{name}</figcaption>
+      <figcaption className="flex px-1 py-1 rounded-lg mt-2">
+        {name}
+      </figcaption>
     </figure>
   )
 }

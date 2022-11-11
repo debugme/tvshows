@@ -8,9 +8,9 @@ export const LoadingCastList = () => {
       <header>
         <h2 className="text-3xl text-slate-600 w-20">Cast</h2>
       </header>
-      <section className="mt-10 grid gap-14 justify-around grid-cols-cast">
+      <main className="mt-10 grid gap-14 justify-around grid-cols-cast">
         {loadingCastList}
-      </section>
+      </main>
     </section>
   )
 }

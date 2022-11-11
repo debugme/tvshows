@@ -4,6 +4,8 @@ import { isEmpty } from "lodash-es"
 import { useSeasonAPI } from "../../hooks"
 import { SeasonCard } from ".."
 
+import { LoadingSeasonList } from "./loadingSeasonList"
+
 export type SeasonListProps = {
   showId: string
 }
@@ -14,7 +16,7 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
   const { data, error, loading } = useSeasonAPI(showId)
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <LoadingSeasonList />
   }
 
   if (error) {
@@ -28,8 +30,10 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
 
   return (
     <section className="col-span-4 mt-8">
-      <header><h2 className="text-3xl text-slate-600 w-20">Seasons</h2></header>
-      <main className="mt-6 grid grid-cols-cast justify-between gap-8">
+      <header>
+        <h2 className="text-3xl text-slate-600 w-20">Seasons</h2>
+      </header>
+      <main className="mt-10 grid gap-14 justify-around grid-cols-season">
         {cardList}
       </main>
     </section>

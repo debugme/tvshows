@@ -7,7 +7,6 @@ export const Home = () => {
   return (
     <section className="flex flex-col w-3/4 mx-auto">
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <h1>Loading? {isLoading ? "yes" : "no"}</h1>
       <ShowList searchTerm={searchTerm} showList={showList} isLoading={isLoading}/>
     </section>
   )

@@ -1,6 +1,6 @@
-import { ChangeEventHandler, FC, useMemo } from "react";
+import { ChangeEventHandler, FC, useMemo, useRef, useState } from "react";
+import { MagnifyingGlassIcon, ArrowPathIcon } from "@heroicons/react/24/outline"
 import { debounce } from "lodash-es"
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 
 export type SearchProps = {
   searchTerm: string;
@@ -10,9 +10,21 @@ export type SearchProps = {
 export const Search: FC<SearchProps> = (props) => {
   const { searchTerm, setSearchTerm } = props
 
+  const timerId = useRef(0)
+  const [indicator, setIndicator] = useState(false)
+
+  const showOrHideLoadingIndicator = () => {
+    clearTimeout(timerId.current)
+    setIndicator(true)
+    timerId.current = setTimeout(() => {
+      setIndicator(false)
+    }, 1000)
+  }
+
   const changeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     const searchTerm = event.target.value.trim().toLocaleLowerCase()
     setSearchTerm(searchTerm)
+    showOrHideLoadingIndicator()
   }
 
   const onChange = useMemo(
@@ -20,17 +32,20 @@ export const Search: FC<SearchProps> = (props) => {
     , [searchTerm, setSearchTerm]);
 
   return (
-    <label className="relative w-full sm:w-3/4 sm:mx-auto mt-2" htmlFor="searchBox">
-      <input
-        id="searchBox"
-        className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-10 rounded-md border-none outline-slate-400"
-        type="search"
-        placeholder="Search titles"
-        title="Type in a search term"
-        defaultValue={searchTerm}
-        onChange={onChange}
-      />
-      <MagnifyingGlassIcon className="absolute top-4 left-2 w-6 h-6 color-slate-700" />
-    </label>
+      <label className="relative w-full sm:w-3/4 sm:mx-auto mt-2" htmlFor="searchBox">
+        <input
+          id="searchBox"
+          className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-10 rounded-md border-none outline-slate-400"
+          type="search"
+          placeholder="Search titles"
+          title="Type in a search term"
+          defaultValue={searchTerm}
+          onChange={onChange}
+        />
+        <MagnifyingGlassIcon className="absolute top-4 left-2 w-6 h-6 text-slate-700" />
+        {indicator && <ArrowPathIcon className="absolute top-4 right-2 w-6 h-6 text-slate-400 animate-spin" />}
+      </label>
   )
 }
+
+

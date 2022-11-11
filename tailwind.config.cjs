@@ -14,6 +14,7 @@ module.exports = {
         home: "repeat(auto-fit, 320px)",
         cast: "repeat(auto-fill, 210px)",
         season: "repeat(auto-fill, 210px)",
+        message: "2fr 1fr"
       }
     }
   },

@@ -5,6 +5,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { Header } from "./header";
+import { Footer } from "./footer";
 
 export const Layout = () => (
   <Fragment>
@@ -19,6 +20,6 @@ export const Layout = () => (
         <Outlet />
       </main>
     </SkeletonTheme>
-    <footer className="bg-slate-700" />
+    <Footer />
   </Fragment>
 )

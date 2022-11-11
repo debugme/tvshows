@@ -7,8 +7,8 @@ import {
   useEffect,
 } from "react";
 
-import { Show, ShowValue } from "../../types";
-import { useShowAPI } from "../../hooks";
+import { Show, ShowValue } from "../types";
+import { useShowAPI } from "../hooks";
 
 const initialValue = {
   searchTerm: "",

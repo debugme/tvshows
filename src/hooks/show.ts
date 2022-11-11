@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { isEmpty } from "lodash-es"
 
-import { Show, ShowInfo } from "../../types";
+import { Show, ShowInfo } from "../types";
 
 const buildShow = (info: ShowInfo) => {
   const { show: { id, name, summary, genres, image: _image } } = info

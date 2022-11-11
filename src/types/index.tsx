@@ -9,7 +9,7 @@ export type ShowItem = {
   show: ShowInfo
 }
 
-export type ShowsValue = SWRValue & {
+export type ShowValue = SWRValue & {
   searchTerm: string,
   setSearchTerm: (searchTerm: string) => void,
   showList: Show[],
@@ -57,7 +57,7 @@ export type Cast = {
   image: string
 }
 
-export type SeasonsValue = SWRValue & {
+export type SeasonValue = SWRValue & {
   seasonList: Season[]
   setSeasonList: (seasonList: Season[]) => void
 }

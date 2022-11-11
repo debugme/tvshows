@@ -1,8 +1,8 @@
 import { ShowList, Search } from "../../components"
-import { useShows } from "../../providers"
+import { useShow } from "../../providers"
 
 export const Home = () => {
-  const { showList, searchTerm, setSearchTerm, isLoading } = useShows()
+  const { showList, searchTerm, setSearchTerm, isLoading } = useShow()
 
   return (
     <section className="flex flex-col w-3/4 mx-auto">

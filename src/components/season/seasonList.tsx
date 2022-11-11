@@ -1,17 +1,17 @@
 import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
-import { useSeasonsAPI } from "../../hooks"
+import { useSeasonAPI } from "../../hooks"
 import { SeasonCard } from ".."
 
-export type SeasonsListProps = {
+export type SeasonListProps = {
   showId: string
 }
 
-export const SeasonList: FC<SeasonsListProps> = (props) => {
+export const SeasonList: FC<SeasonListProps> = (props) => {
   const { showId } = props
 
-  const { data, error, loading } = useSeasonsAPI(showId)
+  const { data, error, loading } = useSeasonAPI(showId)
 
   if (loading) {
     return <h1>Loading...</h1>

@@ -17,7 +17,7 @@ const fetcher = async (endpoint: string): Promise<Show[]> => {
   return showList
 }
 
-export const useShowsAPI = (searchTerm: string) => {
+export const useShowAPI = (searchTerm: string) => {
   const url = "https://api.tvmaze.com/search/shows"
   const queryString = `?q=${encodeURIComponent(searchTerm)}`
   const endpoint = isEmpty(searchTerm) ? null : `${url}${queryString}`

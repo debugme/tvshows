@@ -1,1 +1,1 @@
-export { ShowsProvider, useShows } from './shows'
+export { ShowProvider, useShow } from './show'

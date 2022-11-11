@@ -37,12 +37,10 @@ export const ShowProvider: FC<PropsWithChildren> = (props) => {
   const { data, error, loading } = useShowAPI(searchTerm)
 
   useEffect(() => {
-    if (data)
-      setShowList(data)
-    if (error)
-      setFailure(error)
+    setShowList(data || [])
+    setFailure(error || null)
     setIsLoading(loading)
-  }, [loading])
+  }, [loading, error, data])
 
   const value = {
     searchTerm,

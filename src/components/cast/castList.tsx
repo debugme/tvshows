@@ -2,7 +2,7 @@ import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
 import { useCastAPI } from "../../hooks"
-import { CastCard } from ".."
+import { CastCard } from "./castCard"
 
 export type CastListProps = {
   showId: string

@@ -16,7 +16,12 @@ export const Summary: FC<SummaryProps> = (props) => {
   return (
     <article className="col-span-3 grid grid-cols-3 auto-rows-min">
       <figure>
-        <img className="rounded-lg col-span-1" src={image} alt={name} />
+        {image
+          ? <img className="rounded-lg col-span-1" src={image} alt={name} />
+          : <article className="rounded-lg grid place-content-center bg-slate-600 col-span-1 h-[295px]">
+            <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
+          </article>
+        }
       </figure>
       <figcaption className="col-span-2 flex flex-col justify-end">
         <p className="pl-8 text-5xl">{name}</p>

@@ -10,7 +10,7 @@ export const SeasonCard: FC<SeasonCardProps> = (props) => {
     <figure className="rounded-lg">
       {image
         ? <img className="rounded-lg" src={image} alt={name} />
-        : <article className="rounded-lg grid place-content-center bg-slate-800 w-[210px] h-[295px]">
+        : <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
           <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
         </article>
       }

@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { isEmpty } from "lodash-es"
 
 import { useSeasonsAPI } from "../../hooks"
 import { Season } from "../../types"
@@ -37,6 +38,9 @@ export const SeasonList: FC<SeasonsListProps> = (props) => {
   if (error) {
     return <h1>Error {String(error)}</h1>
   }
+
+  if (isEmpty(data))
+    return null
 
   const seasonsList = data.map((info) => <SeasonCard key={info.id} {...info} />)
 

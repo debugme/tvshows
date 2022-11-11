@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { isEmpty } from "lodash-es"
 
 import { useCastAPI } from "../../hooks"
 import { Cast } from "../../types"
@@ -37,6 +38,9 @@ export const CastList: FC<CastListProps> = (props) => {
   if (error) {
     return <h1>Error {String(error)}</h1>
   }
+
+  if (isEmpty(data))
+    return null
 
   const castList = data.map((info) => <CastCard key={info.id} {...info} />)
 

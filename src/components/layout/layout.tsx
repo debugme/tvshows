@@ -6,6 +6,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { Header } from "./header";
 import { Footer } from "./footer";
+import { Scroller } from "..";
 
 export const Layout = () => (
   <Fragment>
@@ -23,5 +24,6 @@ export const Layout = () => (
       </main>
     </SkeletonTheme>
     <Footer />
+    <Scroller />
   </Fragment>
 )

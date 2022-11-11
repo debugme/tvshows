@@ -20,7 +20,7 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
   }
 
   if (error) {
-    return <h1>Error {String(error)}</h1>
+    return null
   }
 
   if (isEmpty(data))

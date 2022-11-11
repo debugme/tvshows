@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { Bars3BottomRightIcon } from "@heroicons/react/24/outline"
 
-import Logo from "../../images/logo.png"
+import Logo from "./logo.png"
 
 export const Header = () => {
   return (

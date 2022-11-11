@@ -7,7 +7,7 @@ import {
   useEffect,
 } from "react";
 
-import { Show, ShowValue } from "../types";
+import { Nullable, Show, ShowValue } from "../types";
 import { useShowAPI } from "../hooks";
 
 const initialValue = {
@@ -32,7 +32,7 @@ export const ShowProvider: FC<PropsWithChildren> = (props) => {
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
   const [showList, setShowList] = useState<Show[]>(initialShowList)
   const [isLoading, setIsLoading] = useState(initialIsLoading)
-  const [failure, setFailure] = useState(initialFailure)
+  const [failure, setFailure] = useState<Nullable<Error>>(initialFailure)
 
   const { data, error, loading } = useShowAPI(searchTerm)
 

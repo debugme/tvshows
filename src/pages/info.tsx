@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 
-import { Back, CastList, SeasonList, Summary } from "../../components"
+import { Back, CastList, SeasonList, Summary } from "../components"
 
 export const Info = () => {
   const location = useLocation()

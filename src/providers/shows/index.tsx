@@ -35,13 +35,14 @@ export const ShowsProvider: FC<PropsWithChildren> = (props) => {
   const [failure, setFailure] = useState(initialFailure)
 
   const { data, error, loading } = useShowsAPI(searchTerm)
-  
+
   // console.group()
   // console.log("searchTerm is ", searchTerm);
   // console.log("data is ", data);
   // console.log("error is ", error);
   // console.log("loading is ", loading);
-  // console.groupEnd()
+  // console.log("(a) isLoading is ", isLoading);
+  // console.groupEnd()console.log("(a) isLoading is ", isLoading);
 
   useEffect(() => {
     if (data)

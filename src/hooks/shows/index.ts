@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { isEmpty } from "lodash-es"
 
 import { Show, ShowInfo } from "../../types";
 
@@ -19,10 +20,12 @@ const fetcher = async (endpoint: string): Promise<Show[]> => {
 export const useShowsAPI = (searchTerm: string) => {
   const url = "https://api.tvmaze.com/search/shows"
   const queryString = `?q=${encodeURIComponent(searchTerm)}`
-  const endpoint = `${url}${queryString}`
+  const endpoint = isEmpty(searchTerm) ? null : `${url}${queryString}`
   const response = useSWR(endpoint, fetcher)
+  if (isEmpty(searchTerm))
+    return { data: [], error: null, loading: false }
   const { data, error } = response
-  const loading = Boolean(data && !error)
-  const results = { data: data || [], error, loading }  
+  const loading = Boolean(!data && !error)
+  const results = { data: data || [], error, loading }
   return results
 }

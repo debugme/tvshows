@@ -13,6 +13,10 @@ export type ShowListProps = {
 export const ShowList: FC<ShowListProps> = (props) => {
   const { searchTerm, showList, isLoading } = props
 
+  if (isLoading) {
+    return <LoadingShowList />
+  }
+  
   if (isEmpty(searchTerm)) {
     return <NoSearch />
   }
@@ -21,15 +25,12 @@ export const ShowList: FC<ShowListProps> = (props) => {
     return <NoResult />
   }
 
-  if (isLoading) {
-    return <LoadingShowList />
-  }
 
   const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
 
   return (
     <section
-      className="mt-10 w-3/4 mx-auto grid gap-14 align-top justify-center grid-cols-home">
+      className="mt-10 grid gap-14 justify-around grid-cols-home">
       {cardList}
     </section>
   )

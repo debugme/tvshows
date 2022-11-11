@@ -11,7 +11,7 @@ module.exports = {
         sans: ["Nunito Sans", "sans-serif"]
       },
       gridTemplateColumns: {
-        home: "repeat(auto-fit, 288px)",
+        home: "repeat(auto-fit, 320px)",
         cast: "repeat(auto-fill, 210px)",
         season: "repeat(auto-fill, 210px)",
       }

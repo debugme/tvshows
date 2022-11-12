@@ -5,7 +5,7 @@ import { Broke } from "./broke"
 
 export const NoSearch = () => {
   return (
-    <Message title="Feeling lost?" subtitle="Type something">
+    <Message title="Come on!" subtitle="Search for a show">
       <Begin className="w-full flex-grow h-auto" />
     </Message>
   )

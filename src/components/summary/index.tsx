@@ -29,23 +29,21 @@ export const Summary: FC<SummaryProps> = (props) => {
     summary,
   } = props
 
-  const markUp = (
+  return (
     <article className="flex flex-row">
       <section className="flex basis-[5rem] shrink-0 relative">
         <Back />
       </section>
       <section className="flex-grow">
         <section className="flex flex-wrap">
-
           <div className="flex-grow-0 min-w-[250px] mb-10">
             <figure>
               <CoverArt name={name} image={image} />
             </figure>
           </div>
-
           <div className="basis-0 flex-grow min-w-[60%]">
-            <section className="p-4 bg-slate-200 rounded-lg basis-1">
-              <figcaption className="bg-red-200 inline-block mb-2 py-2 px-4 text-xs font-semibold uppercase justify-end rounded-lg">
+            <section className="p-4 bg-slate-200 rounded-lg basis-1 min-h-[140px]">
+              <figcaption className="text-slate-100 bg-slate-400 inline-block mb-2 py-2 px-3 text-xs font-semibold uppercase justify-end rounded-lg">
                 {name}
               </figcaption>
               <summary className="first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-slate-400" dangerouslySetInnerHTML={{ __html: summary }} />
@@ -56,9 +54,6 @@ export const Summary: FC<SummaryProps> = (props) => {
       </section>
     </article>
   )
-
-  return markUp
-
 }
 
 

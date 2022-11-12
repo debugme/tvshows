@@ -33,7 +33,7 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
       <header>
         <h2 className="text-3xl text-slate-600 w-20">Seasons</h2>
       </header>
-      <main className="pl-20 mt-10 grid gap-14 justify-around grid-cols-season">
+      <main className="pl-20 mt-10 grid gap-14 justify-between grid-cols-season">
         {cardList}
       </main>
     </section>

@@ -31,7 +31,7 @@ export const CastList: FC<CastListProps> = (props) => {
       <header>
         <h2 className="text-3xl text-slate-600 w-20">Cast</h2>
       </header>
-      <main className="pl-20 mt-10 grid gap-14 justify-around grid-cols-cast">
+      <main className="pl-20 mt-10 grid gap-14 justify-between grid-cols-cast">
         {cardList}
       </main>
     </section>

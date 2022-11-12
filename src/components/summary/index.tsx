@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Back } from "..";
+import { Back, Chip } from "..";
 
 export type CoverArtProps = {
   name: string;
@@ -43,8 +43,8 @@ export const Summary: FC<SummaryProps> = (props) => {
           </div>
           <div className="basis-0 flex-grow min-w-[60%]">
             <section className="p-4 bg-slate-200 rounded-lg basis-1 min-h-[140px]">
-              <figcaption className="text-slate-100 bg-slate-400 inline-block mb-2 py-2 px-3 text-xs font-semibold uppercase justify-end rounded-lg">
-                {name}
+              <figcaption className="mb-3 my-2 uppercase">
+                <Chip text={name} tooltip={name} />
               </figcaption>
               <summary className="first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-slate-400" dangerouslySetInnerHTML={{ __html: summary }} />
             </section>

@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Nunito Sans", "sans-serif"]
+        sans: ["Poppins", "sans-serif"]
       },
       gridTemplateColumns: {
         home: "repeat(auto-fit, 320px)",

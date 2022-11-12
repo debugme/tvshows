@@ -47,28 +47,28 @@ export const SocialMedia = () => {
 
 export const Breakpoints = () => {
   return (
-    <section className="flex cursor-pointer">
-      <figure className="flex md:hidden" title="cellphone">
-        <DevicePhoneMobileIcon className="w-6 h-6 ml-2" />
-      </figure>
-      <figure className="hidden md:flex lg:hidden" title="tablet">
-        <DeviceTabletIcon className="w-6 h-6 ml-2" />
-      </figure>
-      <figure className="hidden lg:flex xl:hidden" title="laptop">
-        <ComputerDesktopIcon className="w-6 h-6 ml-2" />
-      </figure>
-      <figure className="hidden xl:flex" title="desktop">
+    <section className="flex">
+      <figure className="flex xl:text-yellow-600" title="desktop (1280px to ∞)">
         <TvIcon className="w-6 h-6 ml-2" />
       </figure>
+      <figure className="flex lg:text-yellow-600 xl:text-slate-400" title="laptop (1024px to 1279px)">
+        <ComputerDesktopIcon className="w-6 h-6 ml-2" />
+      </figure>
+      <figure className="flex md:text-yellow-600 lg:text-slate-400" title="tablet (768px to 1023px)">
+        <DeviceTabletIcon className="w-6 h-6 ml-2" />
+      </figure>
+      <figure className="flex text-yellow-600 md:text-slate-400" title="cellphone (0px to 767px)">
+        <DevicePhoneMobileIcon className="w-6 h-6 ml-2" />
+      </figure>      
     </section>
   )
 }
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-700 text-slate-400 flex justify-between items-center px-4">
-      <SocialMedia />
-      <Breakpoints />
+    <footer className="bg-slate-700 flex justify-between items-center px-4">
+      <div className="text-slate-400"><SocialMedia /></div>
+      <div className="text-slate-500"><Breakpoints /></div>
     </footer>
   )
 }

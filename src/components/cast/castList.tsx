@@ -2,8 +2,8 @@ import { FC } from "react"
 import { isEmpty } from "lodash-es"
 
 import { useCastAPI } from "../../hooks"
-import { CastCard } from "./castCard"
 
+import { CastCard } from "./castCard"
 import { LoadingCastList } from "./loadingCastList"
 
 export type CastListProps = {

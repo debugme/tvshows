@@ -11,9 +11,9 @@ export const CoverArt: FC<CoverArtProps> = (props) => {
   const { name, image } = props
   return (image
     ? <img className="rounded-lg min-w-[210px]" src={image} alt={name} />
-    : <article className="rounded-lg grid place-content-center bg-slate-600 h-full">
-      <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
-    </article>
+    : <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
+        <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
+      </article>
   )
 }
 

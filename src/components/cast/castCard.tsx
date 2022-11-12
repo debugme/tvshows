@@ -11,8 +11,8 @@ export const CastCard: FC<CastCardProps> = (props) => {
       {image
         ? <img className="rounded-lg" src={image} alt={name} />
         : <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
-          <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
-        </article>
+            <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
+          </article>
       }
       <figcaption className="flex px-1 py-1 rounded-lg mt-2">
         {name}

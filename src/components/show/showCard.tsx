@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 import { Show } from "../../types"
 import { ChipList } from ".."
+import { isEmpty } from "lodash-es"
 
 export type ImageCardProps = {
   name: string
@@ -46,8 +47,12 @@ export const ShowCard: FC<ShowCardProps> = (props) => {
         <figure>
           <ImageCard name={name} image={image} />
         </figure>
-        <figcaption className="text-xl mt-4 mb-1">{name}</figcaption>
-        <ChipList textList={genres} />
+        <figcaption className="text-xl mt-4">{name}</figcaption>
+        {
+          isEmpty(genres)
+          ? null
+          : <div className="mt-2"><ChipList textList={genres} /></div>
+          }
       </article>
     </Link>
   )

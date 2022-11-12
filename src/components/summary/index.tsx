@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { Back, Chip } from "..";
+import { Nullable } from "../../types";
 
 export type CoverArtProps = {
   name: string;
@@ -19,7 +20,7 @@ export const CoverArt: FC<CoverArtProps> = (props) => {
 export type SummaryProps = {
   name: string,
   image: string,
-  summary: string
+  summary: Nullable<string>
 }
 
 export const Summary: FC<SummaryProps> = (props) => {
@@ -28,6 +29,8 @@ export const Summary: FC<SummaryProps> = (props) => {
     image,
     summary,
   } = props
+
+  const summaryText = { __html: summary || "Yikes! Looks like there is no description currently available for this show." }
 
   return (
     <article className="flex flex-row">
@@ -46,7 +49,7 @@ export const Summary: FC<SummaryProps> = (props) => {
               <figcaption className="mb-3 my-2 uppercase">
                 <Chip text={name} tooltip={name} />
               </figcaption>
-              <summary className="first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-slate-400" dangerouslySetInnerHTML={{ __html: summary }} />
+              <summary className="first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-slate-400" dangerouslySetInnerHTML={summaryText} />
             </section>
           </div>
 

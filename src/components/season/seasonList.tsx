@@ -29,11 +29,11 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
   const cardList = data.map((info) => <SeasonCard key={info.id} {...info} />)
 
   return (
-    <section className="col-span-4 mt-8">
+    <section className="mt-8">
       <header>
         <h2 className="text-3xl text-slate-600 w-20">Seasons</h2>
       </header>
-      <main className="mt-10 grid gap-14 justify-around grid-cols-season">
+      <main className="pl-20 mt-10 grid gap-14 justify-around grid-cols-season">
         {cardList}
       </main>
     </section>

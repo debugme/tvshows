@@ -7,11 +7,10 @@ export const Info = () => {
   const { id, ...rest } = location.state
 
   return (
-    <section className="grid grid-cols-4 w-3/4 mx-auto">
-      <Back />
-      <Summary {...rest} />
-      <CastList showId={id} />
-      <SeasonList showId={id} />
+    <section className="w-3/4 mx-auto">
+        <Summary {...rest} />
+        <CastList showId={id} />
+        <SeasonList showId={id} />
     </section>
   )
 }

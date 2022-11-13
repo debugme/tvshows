@@ -1,5 +1,13 @@
 import { FC } from "react"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import { Cast } from "../../types"
+
+export const BlankCard = () => (
+  <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
+    <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
+  </article>
+)
 
 export type CastCardProps = Cast
 
@@ -9,10 +17,8 @@ export const CastCard: FC<CastCardProps> = (props) => {
   return (
     <figure className="rounded-lg">
       {image
-        ? <img className="rounded-lg" src={image} alt={name} />
-        : <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
-            <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
-          </article>
+        ? <LazyLoadImage effect="blur" className="rounded-lg" src={image} loading="lazy" alt={name} width={210} height={295} />
+        : <BlankCard />
       }
       <figcaption className="flex px-1 py-1 rounded-lg mt-2">
         {name}

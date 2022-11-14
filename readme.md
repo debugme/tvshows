@@ -11,6 +11,27 @@ This information includes the following for each show
 
 ---
 
+## How to Run
+Before you can run the application you need to install its dependencies
+
+```
+% npm install
+```
+
+Now you can start up the application in development mode
+
+```
+% npm run dev
+```
+
+Finally you can open up the following URL in your browser
+
+```
+http://localhost:5173/
+```
+
+---
+
 ## Technologies
 This application was written using a carefully curated set of libraries
 

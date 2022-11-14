@@ -13,9 +13,7 @@ module.exports = {
       gridTemplateColumns: {
         home: "repeat(auto-fit, 320px)",
         cast: "repeat(auto-fill, 210px)",
-        season: "repeat(auto-fill, 210px)",
-        message: "minmax(140px, 1fr) 2fr",
-        info: "repeat(1fr, 6)"
+        season: "repeat(auto-fill, 210px)"
       }
     }
   },

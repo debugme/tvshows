@@ -6,6 +6,7 @@ import { ShowProvider } from './providers';
 import { Home, Info } from "./pages";
 import { Layout } from './components';
 
+import "react-loading-skeleton/dist/skeleton.css";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './index.css'
 

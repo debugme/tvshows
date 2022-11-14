@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --space-72: 72px;
-}
-
 body {
   height: 100vh;
   font-weight: 300;
@@ -14,7 +10,7 @@ body {
 #root {
   height: 100%;
   display: grid;
-  grid-template-rows: var(--space-72) 1fr var(--space-72);
+  grid-template-rows: 72px 1fr 72px;
 }
 
 input[type="search"]::-webkit-search-cancel-button {

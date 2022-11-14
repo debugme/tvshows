@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { Back, Chip } from "..";
 import { Nullable } from "../../types";
+import { Back, Chip } from "..";
 
 export type CoverArtProps = {
   name: string;
@@ -60,5 +60,3 @@ export const Summary: FC<SummaryProps> = (props) => {
     </article>
   )
 }
-
-

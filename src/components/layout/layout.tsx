@@ -2,8 +2,6 @@ import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { SkeletonTheme } from "react-loading-skeleton";
 
-import "react-loading-skeleton/dist/skeleton.css";
-
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { Scroller } from "..";

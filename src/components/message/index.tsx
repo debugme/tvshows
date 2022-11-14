@@ -13,7 +13,7 @@ export const NoSearch = () => {
 
 export const NoResult = () => {
   return (
-    <Message title="No hotdog!" subtitle="Try again">
+    <Message title="No luck!" subtitle="Try another show">
       <Empty className="w-full flex-grow h-auto" />
     </Message>
   )
@@ -22,7 +22,7 @@ export const NoResult = () => {
 export const NoServer = () => {
   return (
     <Message title="Oh gosh!" subtitle="We're broke">
-      <Broke className="w-full flex-grow h-auto" />
+      <Broke className="w-3/4 flex-grow h-auto" />
     </Message>
   )
 }

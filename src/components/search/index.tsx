@@ -35,15 +35,15 @@ export const Search: FC<SearchProps> = (props) => {
       <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
         <input
           id="searchBox"
-          className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-10 rounded-md border-none outline-slate-400"
+          className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-11 rounded-md border-none outline-slate-400"
           type="search"
           placeholder="Search titles"
           title="Type in a search term"
           defaultValue={searchTerm}
           onChange={onChange}
         />
-        <MagnifyingGlassIcon className="absolute top-4 left-2 w-6 h-6 text-slate-700" />
-        {indicator && <ArrowPathIcon className="absolute top-4 right-2 w-6 h-6 text-slate-400 animate-spin" />}
+        <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-slate-700" />
+        {indicator && <ArrowPathIcon className="absolute top-4 right-3 w-6 h-6 text-slate-700 animate-spin bg-slate-100" />}
       </label>
   )
 }

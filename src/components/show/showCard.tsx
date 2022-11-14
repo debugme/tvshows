@@ -48,7 +48,7 @@ export const ShowCard: FC<ShowCardProps> = (props) => {
 
   return (
     <Link to={pathname} state={state}>
-      <article className="w-80 rounded-lg">
+      <article className="rounded-lg">
         <figure>
           <ImageCard name={name} image={image} />
         </figure>

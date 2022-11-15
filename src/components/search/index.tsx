@@ -5,6 +5,7 @@ import { debounce } from "lodash-es"
 import { Nullable } from "../../types";
 import { Field } from './field'
 import { Spinner } from './spinner'
+import { Popular } from './popular'
 import { Status } from './status'
 
 export type SearchProps = {
@@ -41,6 +42,7 @@ export const Search: FC<SearchProps> = (props) => {
   return (
     <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
       <Field defaultValue={searchTerm} onChange={onChange}/>
+      <Popular setSearchTerm={setSearchTerm}/>
       <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-slate-700" />
       <Spinner showSpinner={showSpinner} />
       <Status searchTerm={searchTerm} failure={failure} hits={hits} />

@@ -1,8 +1,11 @@
 import { ChangeEventHandler, FC, useMemo, useRef, useState } from "react";
-import { MagnifyingGlassIcon, ArrowPathIcon } from "@heroicons/react/24/outline"
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 import { debounce, isEmpty } from "lodash-es"
+
 import { Nullable } from "../../types";
-import { NoResult, NoSearch, NoServer } from "..";
+import { Field } from './field'
+import { Spinner } from './spinner'
+import { Status } from './status'
 
 export type SearchProps = {
   searchTerm: string;
@@ -15,13 +18,13 @@ export const Search: FC<SearchProps> = (props) => {
   const { searchTerm, setSearchTerm, failure, hits } = props
 
   const timerId = useRef(0)
-  const [indicator, setIndicator] = useState(false)
+  const [showSpinner, setShowSpinner] = useState(false)
 
   const showOrHideLoadingIndicator = () => {
     clearTimeout(timerId.current)
-    setIndicator(true)
+    setShowSpinner(true)
     timerId.current = setTimeout(() => {
-      setIndicator(false)
+      setShowSpinner(false)
     }, 1000)
   }
 
@@ -37,29 +40,10 @@ export const Search: FC<SearchProps> = (props) => {
 
   return (
     <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
-      <input
-        id="searchBox"
-        className="placeholder-slate-400 selection:bg-yellow-300 bg-slate-100 w-full py-4 pl-11 rounded-md border-none outline-slate-400"
-        type="search"
-        placeholder="Search titles"
-        title="Type in a search term"
-        defaultValue={searchTerm}
-        onChange={onChange}
-      />
+      <Field defaultValue={searchTerm} onChange={onChange}/>
       <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-slate-700" />
-      {indicator && <ArrowPathIcon className="absolute top-4 right-3 w-6 h-6 text-slate-700 animate-spin bg-slate-100" />}
-      {
-        failure 
-          ? <NoServer />
-          : isEmpty(searchTerm)
-          ? <NoSearch />
-          : hits === 0
-          ? <NoResult />
-          : null
-      }
-
+      <Spinner showSpinner={showSpinner} />
+      <Status searchTerm={searchTerm} failure={failure} hits={hits} />
     </label>
   )
 }
-
-

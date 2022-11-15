@@ -52,7 +52,6 @@ This application was written using a carefully curated set of libraries
 This application follows a standard approach to building a single page application.
 - Pages - contains the home page and the info page
 - Components - houses the components used by the pages
-- Providers - hold application state and exposes it via hooks
 - Hooks - some custom hooks for fetching cast and season information
 - Types - a set of common types used across the application
 

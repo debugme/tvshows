@@ -6,8 +6,13 @@ export const Home = () => {
 
   return (
     <section className="flex flex-col w-3/4 mx-auto">
-      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <ShowList searchTerm={searchTerm} showList={showList} isLoading={isLoading} failure={failure} />
+      <Search 
+        searchTerm={searchTerm} 
+        setSearchTerm={setSearchTerm} 
+        failure={failure}
+        hits={showList.length}
+        />
+      <ShowList showList={showList} isLoading={isLoading} />
     </section>
   )
 }

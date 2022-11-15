@@ -1,6 +1,8 @@
 ## Introduction
 Showz™️ is a web application that allows a user to find information about TV shows.
 
+<img width="1034" alt="showz" src="https://user-images.githubusercontent.com/2932374/201993072-a021b156-7f8b-4f18-a27d-e09a669ad2cd.png">
+
 This information includes the following for each show
 - Title - the name of the show
 - Artwork - an image of the show

@@ -26,8 +26,8 @@ export const Breakpoints = () => {
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-700 text-slate-500 flex justify-between items-center px-4">
-      <section className="flex">
+    <footer className="bg-slate-700 text-slate-500 flex justify-end items-center px-4">
+      <section className="flex text-yellow-600">
         <p className="md:hidden">Cellphone</p>
         <p className="hidden md:block lg:hidden">Tablet</p>
         <p className="hidden lg:block xl:hidden">Laptop</p>

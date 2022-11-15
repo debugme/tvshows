@@ -1,6 +1,6 @@
 import { ChangeEventHandler, FC, useMemo, useRef, useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
-import { debounce, isEmpty } from "lodash-es"
+import { debounce } from "lodash-es"
 
 import { Nullable } from "../../types";
 import { Field } from './field'

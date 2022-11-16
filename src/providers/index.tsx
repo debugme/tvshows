@@ -40,7 +40,7 @@ export const ShowProvider: FC<PropsWithChildren> = (props) => {
     setShowList(data || [])
     setFailure(error || null)
     setIsLoading(loading)
-  }, [loading, error])
+  }, [loading, error, searchTerm])
 
   const value = {
     searchTerm,

@@ -1,12 +1,12 @@
 import { ChangeEventHandler, FC } from "react";
 
 export type FieldProps = {
-  defaultValue: string;
+  value: string;
   onChange: ChangeEventHandler<HTMLInputElement>
 }
 
 export const Field: FC<FieldProps> = (props) => {
-  const { defaultValue, onChange } = props
+  const { value, onChange } = props
   return (
     <input
       id="searchBox"
@@ -14,7 +14,7 @@ export const Field: FC<FieldProps> = (props) => {
       type="search"
       placeholder="Search titles"
       title="Type in a search term"
-      defaultValue={defaultValue}
+      value={value}
       onChange={onChange}
     />
   )

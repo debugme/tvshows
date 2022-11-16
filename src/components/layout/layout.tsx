@@ -15,8 +15,8 @@ export const Layout = () => (
       borderRadius="0.5rem"
       duration={4}
     >
-      <main className="bg-slate-300 overflow-scroll py-8">
-        <section className="flex flex-col max-w-screen-2xl mx-auto pt-2">
+      <main className="bg-main-1 overflow-scroll py-8">
+        <section className="flex flex-col mx-auto pt-2 max-w-screen-2xl">
           <Outlet />
         </section>
       </main>

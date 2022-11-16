@@ -7,7 +7,7 @@ import {
 
 export const Breakpoints = () => {
   return (
-    <section className="flex cursor-pointer">
+    <section className="flex cursor-pointer text-footer-1">
       <figure className="flex xl:text-footer-3" title="desktop (1280px to ∞)">
         <TvIcon className="w-6 h-6 ml-2" />
       </figure>

@@ -29,19 +29,15 @@ export const Search: FC<SearchProps> = (props) => {
     }, 1000)
   }
 
-  const changeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
+  const onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     const searchTerm = event.target.value.trim().toLocaleLowerCase()
     setSearchTerm(searchTerm)
     showOrHideLoadingIndicator()
   }
 
-  const onChange = useMemo(
-    () => debounce(changeHandler, 300)
-    , [searchTerm, setSearchTerm]);
-
   return (
     <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
-      <Field defaultValue={searchTerm} onChange={onChange}/>
+      <Field value={searchTerm} onChange={onChange}/>
       <Popular setSearchTerm={setSearchTerm}/>
       <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-slate-700" />
       <Spinner showSpinner={showSpinner} />

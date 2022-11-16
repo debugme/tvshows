@@ -4,8 +4,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Cast } from "../../types"
 
 export const BlankCard = () => (
-  <article className="rounded-lg grid place-content-center bg-slate-600 w-[210px] h-[295px]">
-    <h2 className="rounded-lg text-5xl text-slate-400">?</h2>
+  <article className="rounded-lg grid place-content-center bg-cast-1 w-[210px] h-[295px]">
+    <h2 className="rounded-lg text-5xl text-cast-2">?</h2>
   </article>
 )
 

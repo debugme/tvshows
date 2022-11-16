@@ -1,6 +1,6 @@
 import { FC, Fragment, MouseEventHandler } from "react"
 
-const popularTitles = ["The Flash", "Supergirl", "Batman", "Gentleman Jack"]
+const popularTitles = ["The Flash", "Supergirl", "Batman", "Wonder Woman", "Spiderman", "X-Men"]
 
 const className = "mt-3 py-2 px-3 bg-yellow-400 text-yellow-800 inline-block rounded-lg cursor-pointer w-auto text-center"
 

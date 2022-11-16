@@ -10,7 +10,7 @@ export const Home = () => {
         searchTerm={searchTerm} 
         setSearchTerm={setSearchTerm} 
         failure={failure}
-        hits={showList.length}
+        resultCount={showList.length}
         />
       <ShowList showList={showList} isLoading={isLoading} />
     </section>

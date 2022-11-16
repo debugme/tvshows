@@ -7,16 +7,16 @@ import { NoResult, NoSearch, NoServer } from "..";
 export type StatusProps = {
   searchTerm: string;
   failure: Nullable<Error>
-  hits: number
+  resultCount: number
 }
 
 export const Status: FC<StatusProps> = (props) => {
-  const { failure, searchTerm, hits } = props
+  const { failure, searchTerm, resultCount } = props
   if (failure)
     return <NoServer />
   if (isEmpty(searchTerm))
     return <NoSearch />
-  if (hits === 0)
+  if (resultCount === 0)
     return <NoResult />
   return null
 }

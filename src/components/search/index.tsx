@@ -1,6 +1,5 @@
-import { ChangeEventHandler, FC, useMemo, useRef, useState } from "react";
+import { ChangeEventHandler, FC, useRef, useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
-import { debounce } from "lodash-es"
 
 import { Nullable } from "../../types";
 import { Field } from './field'
@@ -12,11 +11,11 @@ export type SearchProps = {
   searchTerm: string;
   setSearchTerm: (searchTerm: string) => void
   failure: Nullable<Error>
-  hits: number
+  resultCount: number
 }
 
 export const Search: FC<SearchProps> = (props) => {
-  const { searchTerm, setSearchTerm, failure, hits } = props
+  const { searchTerm, setSearchTerm, failure, resultCount } = props
 
   const timerId = useRef(0)
   const [showSpinner, setShowSpinner] = useState(false)
@@ -38,10 +37,10 @@ export const Search: FC<SearchProps> = (props) => {
   return (
     <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
       <Field value={searchTerm} onChange={onChange}/>
-      <Popular setSearchTerm={setSearchTerm}/>
+      <Popular setSearchTerm={setSearchTerm} resultCount={resultCount}/>
       <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-slate-700" />
       <Spinner showSpinner={showSpinner} />
-      <Status searchTerm={searchTerm} failure={failure} hits={hits} />
+      <Status searchTerm={searchTerm} failure={failure} resultCount={resultCount} />
     </label>
   )
 }

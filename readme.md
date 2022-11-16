@@ -61,7 +61,7 @@ You can resize the browser width to see how the application adjusts accordingly.
 
 ## Performance
 I optimised for data fetching and image fetching using certain well-known strategies
-- Data Fetching - the search box was debounced to not trigger on every keystroke
+- Data Fetching - API requests are cached via SWR to avoid being triggered on each keystroke
 - Image Fetching - lazy loading was used to only fetch above the fold images
 
 ## User Experience

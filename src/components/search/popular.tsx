@@ -2,7 +2,7 @@ import { FC, Fragment, MouseEventHandler } from "react"
 
 const popularTitles = ["The Flash", "Supergirl", "Batman", "Wonder Woman", "Spiderman", "X-Men"]
 
-const className = "mt-3 py-2 px-3 bg-tag-1 text-tag-2 inline-block rounded-lg cursor-pointer w-auto text-center"
+const className = "mt-3 py-2 px-3 bg-tag-bg text-tag-fg inline-block rounded-lg cursor-pointer w-auto text-center"
 
 export type PopularProps = {
   setSearchTerm: (searchTerm: string) => void
@@ -23,7 +23,7 @@ export const Popular: FC<PopularProps> = (props) => {
 
   return (
     <Fragment>
-      <h2 className="text-3xl text-heading-1 w-20 mt-8">Popular</h2>
+      <h2 className="text-3xl text-heading-fg w-20 mt-8">Popular</h2>
       <dl className="flex justify-start items-center pt-1 flex-wrap gap-x-2 md:gap-2 md:pb-2">
         {tagList}
       </dl>

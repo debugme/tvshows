@@ -17,27 +17,28 @@ module.exports = {
           season: "repeat(auto-fill, 210px)"
         },
         colors: {
-          "header-1": "rgb(148 163 184)",
-          "header-2": "rgb(51 65 85)",
-          "footer-1": "rgb(100 116 139)",
-          "footer-2": "rgb(51 65 85)",
-          "footer-3": "rgb(202 138 4)",
-          "main-1": "rgb(203 213 225)",
-          "message-1": "rgb(148 163 184)",
-          "message-2": "rgb(71 85 105)",
-          "tag-1": "rgb(250 204 21)",
-          "tag-2": "rgb(133 77 14)",
-          "heading-1": "rgb(71 85 105)",
-          "icon-1": "rgb(51 65 85)",
-          "search-1": "rgb(148 163 184)",
-          "search-2": "rgb(253 224 71)",
-          "search-3": "rgb(241 245 249)",
-          "search-4": "#94a3b8",
-          "search-5": "rgb(71 85 105)",
-          "spinner-1":"rgb(51 65 85)",
-          "spinner-2":"rgb(241 245 249)",
-          "chip-1":"rgb(241 245 249)",
-          "chip-2":"rgb(148 163 184)",
+          "header-fg": "rgb(148 163 184)",
+          "header-bg": "rgb(51 65 85)",
+          "footer-fgi": "rgb(100 116 139)",
+          "footer-bg": "rgb(51 65 85)",
+          "footer-fga": "rgb(202 138 4)",
+          "main-fg": "rgb(203 213 225)",
+          "message-bg": "rgb(148 163 184)",
+          "message-fg": "rgb(71 85 105)",
+          "tag-bg": "rgb(250 204 21)",
+          "tag-fg": "rgb(133 77 14)",
+          "heading-fg": "rgb(71 85 105)",
+          "search-icon-fg": "rgb(51 65 85)",
+          "search-placeholder-fg": "rgb(148 163 184)",
+          "search-selection-bg": "rgb(253 224 71)",
+          "search-bg": "rgb(241 245 249)",
+          "search-focus-outline": "#94a3b8",
+          "search-fg": "rgb(71 85 105)",
+          "spinner-fg":"rgb(51 65 85)",
+          "spinner-bg":"rgb(241 245 249)",
+          
+          "chip-fg":"rgb(241 245 249)",
+          "chip-bg":"rgb(148 163 184)",
           "show-1":"rgb(71 85 105)",
           "show-2":"rgb(148 163 184)",
           "show-3":"rgb(148 163 184)",
@@ -61,27 +62,28 @@ module.exports = {
         name: "cartoon",
         extend: {
           colors: {
-            'header-1': "#94a3b8",          /* color */
-            'header-2': "#f8fafc",          /* background-color*/
-            'footer-1': "#94a3b8",          /* color-inactive */
-            'footer-2': "#f8fafc",          /* background-color */
-            'footer-3': "#475569",          /* color-active */
-            'main-1': "#f8fafc",            /* color */
-            "message-1": "#e2e8f0",         /* background-color */
-            "message-2": "#64748b",         /* color */    
-            "tag-1": "#e2e8f0",             /* background-color */
-            "tag-2": "#64748b",             /* color */
-            "heading-1": "#94a3b8",         /* color */
-            "icon-1": "#94a3b8",            /* search-icon */
-            "search-1": "#94a3b8",          /* placeholder-color */
-            "search-2": "orange",           /* selection-color */ 
-            "search-3": "#cbd5e1",          /* background-color */
-            "search-4": "#94a3b8",          /* focus-outline-color */
-            "search-5": "#475569",          /* color */
-            "spinner-1":"#94a3b8",          /* color */
-            "spinner-2":"#cbd5e1",          /* background-color */
-            "chip-1":"#475569",              /* color */
-            "chip-2":"#e2e8f0",             /* background-color */
+            'header-fg': "#94a3b8",
+            'header-bg': "#f8fafc",
+            'footer-fgi': "#94a3b8",
+            'footer-bg': "#f8fafc",
+            'footer-fga': "#475569",
+            'main-fg': "#f8fafc",
+            "message-bg": "#e2e8f0",
+            "message-fg": "#64748b",
+            "tag-bg": "#e2e8f0",
+            "tag-fg": "#64748b",
+            "heading-fg": "#94a3b8",
+            "search-icon-fg": "#94a3b8",
+            "search-placeholder-fg": "#94a3b8",
+            "search-selection-bg": "orange",
+            "search-bg": "#cbd5e1",
+            "search-focus-outline": "#94a3b8",
+            "search-fg": "#475569",
+            "spinner-fg":"#94a3b8",
+            "spinner-bg":"#cbd5e1",
+            "chip-fg":"#475569",
+
+            "chip-bg":"#e2e8f0",
             "show-1":"violet",
             "show-2":"purple",    
             "show-3":"blue",
@@ -91,7 +93,7 @@ module.exports = {
             "back-icon": "#94a3b8",
             "back-2": "#94a3b8",     
             "season-1": "pink",
-            "season-2": "#e2e8f0",        /* blank-season-background-color */
+            "season-2": "#e2e8f0",
             "summary-1": "yellow",
             "summary-2": "orange",
             "summary-3": "#e2e8f0",

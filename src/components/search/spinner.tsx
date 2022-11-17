@@ -9,5 +9,5 @@ export const Spinner: FC<SpinnerProps> = (props) => {
   const { showSpinner } = props
   if (!showSpinner)
     return null
-  return <ArrowPathIcon className="absolute top-4 right-3 w-6 h-6 text-slate-700 animate-spin bg-slate-100" />
+  return <ArrowPathIcon className="absolute top-4 right-3 w-6 h-6 text-spinner-1 animate-spin bg-spinner-2" />
 }

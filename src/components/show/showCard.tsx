@@ -21,7 +21,7 @@ export const ImageCard: FC<ImageCardProps> = (props) => {
   const { name, image } = props
   return (
     image
-      ? <LazyLoadImage effect="blur" className="cursor-pointer rounded-lg object-cover object-top w-80 h-80 hover:drop-shadow-2xl" src={image} loading="lazy" alt={name} width={320} height={320} />
+      ? <LazyLoadImage effect="blur" className="cursor-pointer rounded-lg object-cover object-top w-80 h-80 hover:drop-shadow-2xl" src={image} loading="lazy" alt={name} />
       : <BlankCard />
   )
 }

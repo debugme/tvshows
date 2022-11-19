@@ -1,15 +1,15 @@
 export type Nullable<T> = T | null
 
-export type SWRValue = {
+export type ResponseValue = {
   isLoading: boolean,
-  failure: Nullable<Error>  
+  failure: unknown  
 }
 
 export type ShowItem = {
   show: ShowInfo
 }
 
-export type ShowValue = SWRValue & {
+export type ShowValue = ResponseValue & {
   searchTerm: string,
   setSearchTerm: (searchTerm: string) => void,
   showList: Show[],
@@ -36,7 +36,7 @@ export type Show = {
   summary: string;
 }
 
-export type CastValue = SWRValue & {
+export type CastValue = ResponseValue & {
   castList: Cast[]
   setCastList: (castList: Cast[]) => void
 }
@@ -57,7 +57,7 @@ export type Cast = {
   image: string
 }
 
-export type SeasonValue = SWRValue & {
+export type SeasonValue = ResponseValue & {
   seasonList: Season[]
   setSeasonList: (seasonList: Season[]) => void
 }

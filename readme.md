@@ -39,7 +39,6 @@ This application was written using a carefully curated set of libraries
 - [React Router DOM](https://reactrouter.com/) - used to provide client-side routing
 - [React Lazy Load Image Component](https://github.com/Aljullu/react-lazy-load-image-component) - for image loading and UI effects
 - [React Loading Skeleton](https://www.npmjs.com/package/react-loading-skeleton) - to build custom loading images
-- [SWR](https://swr.vercel.app/) - a collection of hooks for data fetching 
 - [Lodash](https://lodash.com/) - a collection of utility functions for data shaping
 - [Vite](https://vitejs.dev/) - a bundler used to provide a better development experience
 
@@ -59,8 +58,7 @@ This required me to adjust the designs which were desktop-first.
 You can resize the browser width to see how the application adjusts accordingly.
 
 ## Performance
-I optimised for data fetching and image fetching using certain well-known strategies
-- Data Fetching - API requests cached via SWR to avoid unnecessary network calls
+I optimised for image fetching using certain well-known strategies
 - Image Fetching - lazy loading was used to only fetch above the fold images
 
 ## User Experience

@@ -1,6 +1,5 @@
-import useSWR from "swr";
-
-import { Season, SeasonInfo } from "../types";
+import { SeasonInfo } from "../types";
+import { useFetch } from "./useFetch";
 
 const buildSeason = (info: SeasonInfo) => {
   const { id, number, image: _image } = info
@@ -10,18 +9,10 @@ const buildSeason = (info: SeasonInfo) => {
   return season
 }
 
-const fetcher = async (endpoint: string): Promise<Season[]> => {
-  const response = await fetch(endpoint)
-  const infoList: SeasonInfo[] = await response.json()
-  const seasonList = infoList.map(buildSeason)
-  return seasonList
-}
-
 export const useSeasonAPI = (showId: string) => {
-  const endpoint = `https://api.tvmaze.com/shows/${showId}/seasons`
-  const response = useSWR(endpoint, fetcher)
-  const { data, error } = response
-  const loading = Boolean(!data && !error)
-  const results = { data: data || [], error, loading }
-  return results
+  const url = `https://api.tvmaze.com/shows/${showId}/seasons`
+  const { data, error, loading } = useFetch<SeasonInfo[]>(url)
+  const list = data && data.map(buildSeason) || []
+  const response = { data: list, error, loading }
+  return response  
 }

@@ -1,7 +1,7 @@
-import useSWR from "swr";
 import { uniqBy } from "lodash-es"
 
-import { Cast, CastInfo } from "../types";
+import { CastInfo } from "../types";
+import { useFetch } from "./useFetch";
 
 const buildCast = (info: CastInfo) => {
   const { person: { id, name, image: _image } } = info
@@ -10,18 +10,10 @@ const buildCast = (info: CastInfo) => {
   return cast
 }
 
-const fetcher = async (endpoint: string): Promise<Cast[]> => {
-  const response = await fetch(endpoint)
-  const infoList: CastInfo[] = await response.json()
-  const castList = uniqBy(infoList.map(buildCast), 'id')
-  return castList
-}
-
 export const useCastAPI = (showId: string) => {
-  const endpoint = `https://api.tvmaze.com/shows/${showId}/cast`
-  const response = useSWR(endpoint, fetcher)
-  const { data, error } = response
-  const loading = Boolean(!data && !error)
-  const results = { data: data || [], error, loading }
-  return results
+  const url = `https://api.tvmaze.com/shows/${showId}/cast`
+  const { data, error, loading } = useFetch<CastInfo[]>(url)
+  const list = data && uniqBy(data.map(buildCast), 'id') || []
+  const response = { data: list, error, loading }
+  return response
 }

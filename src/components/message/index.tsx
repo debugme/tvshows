@@ -1,7 +1,5 @@
+import { Begin, Broke, Empty } from "../images"
 import { Message } from "./message"
-import { Begin } from "./begin"
-import { Empty } from "./empty"
-import { Broke } from "./broke"
 
 export const NoSearch = () => {
   return (

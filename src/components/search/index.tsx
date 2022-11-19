@@ -1,7 +1,7 @@
 import { ChangeEventHandler, FC, useRef, useState } from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 
 import { Nullable } from "../../types";
+import { Search as SearchIcon} from "../images"
 import { Field } from './field'
 import { Spinner } from './spinner'
 import { Popular } from './popular'
@@ -38,7 +38,7 @@ export const Search: FC<SearchProps> = (props) => {
     <label className="relative w-full sm:mx-auto" htmlFor="searchBox">
       <Field value={searchTerm} onChange={onChange}/>
       <Popular setSearchTerm={setSearchTerm} resultCount={resultCount}/>
-      <MagnifyingGlassIcon className="absolute top-4 left-3 w-6 h-6 text-search-icon-fg" />
+      <SearchIcon className="absolute top-4 left-3 w-6 h-6 text-search-icon-fg" />
       <Spinner showSpinner={showSpinner} />
       <Status searchTerm={searchTerm} failure={failure} resultCount={resultCount} />
     </label>

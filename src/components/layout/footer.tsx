@@ -1,24 +1,24 @@
 import {
-  DevicePhoneMobileIcon,
-  DeviceTabletIcon,
-  ComputerDesktopIcon,
-  TvIcon
-} from "@heroicons/react/24/outline"
+  Cellphone,
+  Tablet,
+  Laptop,
+  Desktop
+} from "../images"
 
 export const Breakpoints = () => {
   return (
     <section className="flex cursor-pointer text-footer-fgi">
       <figure className="flex xl:text-footer-fga" title="desktop (1280px to ∞)">
-        <TvIcon className="w-6 h-6 ml-2" />
+        <Desktop className="w-6 h-6 ml-2" />
       </figure>
       <figure className="flex lg:text-footer-fga xl:text-footer-fgi" title="laptop (1024px to 1279px)">
-        <ComputerDesktopIcon className="w-6 h-6 ml-2" />
+        <Laptop className="w-6 h-6 ml-2" />
       </figure>
       <figure className="flex md:text-footer-fga lg:text-footer-fgi" title="tablet (768px to 1023px)">
-        <DeviceTabletIcon className="w-6 h-6 ml-2" />
+        <Tablet className="w-6 h-6 ml-2" />
       </figure>
       <figure className="flex text-footer-fga md:text-footer-fgi" title="cellphone (0px to 767px)">
-        <DevicePhoneMobileIcon className="w-6 h-6 ml-2" />
+        <Cellphone className="w-6 h-6 ml-2" />
       </figure>
     </section>
   )

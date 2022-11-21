@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { Nullable, Show, ShowValue } from "../types";
-import { useShowAPI } from "../hooks";
+import { useShowAPI, useDebounce } from "../hooks";
 
 const initialValue = {
   searchTerm: "",
@@ -33,14 +33,15 @@ export const ShowProvider: FC<PropsWithChildren> = (props) => {
   const [showList, setShowList] = useState<Show[]>(initialShowList)
   const [isLoading, setIsLoading] = useState(initialIsLoading)
   const [failure, setFailure] = useState<Nullable<unknown>>(initialFailure)
+  const debouncedSearchTerm = useDebounce(searchTerm, 300)
 
-  const { data, error, loading } = useShowAPI(searchTerm)
+  const { data, error, loading } = useShowAPI(debouncedSearchTerm)
 
   useEffect(() => {
     setShowList(data || [])
     setFailure(error || null)
     setIsLoading(loading)
-  }, [loading, error, searchTerm])
+  }, [debouncedSearchTerm, error, loading])
 
   const value = {
     searchTerm,

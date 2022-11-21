@@ -1,17 +1,27 @@
-import { CastInfo } from "../types";
+import { Cast, CastInfo } from "../types";
 import { useFetch } from "./useFetch";
 
-const buildCast = (info: CastInfo) => {
+type CastStats = {
+  list: Cast[]
+  hits: Record<string, boolean>
+}
+
+const reduceCast = (accumulator: CastStats, info: CastInfo) => {
   const { person: { id, name, image: _image } } = info
   const image = _image?.medium || ""
+  if (accumulator.hits[id])
+    return accumulator
+  accumulator.hits[id] = true
   const cast = { id, name, image }
-  return cast
+  accumulator.list.push(cast)
+  return accumulator
 }
 
 export const useCastAPI = (showId: string) => {
+  const stats = { list: [], hits: {} }
   const url = `https://api.tvmaze.com/shows/${showId}/cast`
   const { data, error, loading } = useFetch<CastInfo[]>(url)
-  const list = data && data.map(buildCast) || []
-  const response = { data: list, error, loading }
+  data?.reduce(reduceCast, stats)
+  const response = { data: stats.list, error, loading }
   return response
 }

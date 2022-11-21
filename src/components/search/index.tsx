@@ -29,7 +29,7 @@ export const Search: FC<SearchProps> = (props) => {
   }
 
   const onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    const searchTerm = event.target.value.trim().toLocaleLowerCase()
+    const searchTerm = event.target.value.toLocaleLowerCase()
     setSearchTerm(searchTerm)
     showOrHideLoadingIndicator()
   }

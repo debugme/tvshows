@@ -33,7 +33,7 @@ export const ShowProvider: FC<PropsWithChildren> = (props) => {
   const [showList, setShowList] = useState<Show[]>(initialShowList)
   const [isLoading, setIsLoading] = useState(initialIsLoading)
   const [failure, setFailure] = useState<Nullable<unknown>>(initialFailure)
-  const debouncedSearchTerm = useDebounce(searchTerm, 300)
+  const debouncedSearchTerm = useDebounce(searchTerm.trim(), 300)
 
   const { data, error, loading } = useShowAPI(debouncedSearchTerm)
 

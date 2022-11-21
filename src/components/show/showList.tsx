@@ -2,7 +2,6 @@ import { FC, Fragment } from "react"
 
 import { Show } from "../../types"
 import { ShowCard, LoadingShowList } from ".."
-import { isEmpty } from "lodash-es"
 
 export type ShowListProps = {
   showList: Show[]
@@ -18,7 +17,7 @@ export const ShowList: FC<ShowListProps> = (props) => {
 
   const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
 
-  if(isEmpty(cardList))
+  if (cardList.length === 0)
     return null
 
   return (

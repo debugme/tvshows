@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { isEmpty } from "lodash-es";
 
 import { Nullable } from "../../types";
 import { NoResult, NoSearch, NoServer } from "..";
@@ -14,7 +13,7 @@ export const Status: FC<StatusProps> = (props) => {
   const { failure, searchTerm, resultCount } = props
   if (failure)
     return <NoServer />
-  if (isEmpty(searchTerm))
+  if (searchTerm.length === 0)
     return <NoSearch />
   if (resultCount === 0)
     return <NoResult />

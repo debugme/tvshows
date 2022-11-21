@@ -1,6 +1,5 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
-import { isEmpty } from "lodash-es"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Show } from "../../types"
@@ -54,7 +53,7 @@ export const ShowCard: FC<ShowCardProps> = (props) => {
         </figure>
         <figcaption className="text-xl mt-4">{name}</figcaption>
         {
-          isEmpty(genres)
+          genres.length === 0
             ? null
             : <div className="mt-2"><ChipList textList={genres} /></div>
         }

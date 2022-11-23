@@ -1,4 +1,4 @@
-import { ShowInfo } from "../types";
+import { Show, ShowInfo } from "../types";
 import { useFetch } from "./useFetch";
 
 const buildShow = (info: ShowInfo) => {
@@ -13,7 +13,7 @@ export const useShowAPI = (searchTerm: string) => {
   const query = `?q=${encodeURIComponent(searchTerm)}`
   const url = `${endpoint}${query}`
   const { data, error, loading } = useFetch<ShowInfo[]>(url)
-  const list = data && data.map(buildShow) || []
+  const list: Show[] = data && data.map(buildShow) || []
   const response = { data: list, error, loading }
   return response
 }

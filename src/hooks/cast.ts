@@ -18,7 +18,7 @@ const reduceCast = (accumulator: CastStats, info: CastInfo) => {
 }
 
 export const useCastAPI = (showId: string) => {
-  const stats = { list: [], hits: {} }
+  const stats: CastStats = { list: [], hits: {} }
   const url = `https://api.tvmaze.com/shows/${showId}/cast`
   const { data, error, loading } = useFetch<CastInfo[]>(url)
   data?.reduce(reduceCast, stats)

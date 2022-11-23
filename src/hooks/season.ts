@@ -1,4 +1,4 @@
-import { SeasonInfo } from "../types";
+import { Season, SeasonInfo } from "../types";
 import { useFetch } from "./useFetch";
 
 const buildSeason = (info: SeasonInfo) => {
@@ -12,7 +12,7 @@ const buildSeason = (info: SeasonInfo) => {
 export const useSeasonAPI = (showId: string) => {
   const url = `https://api.tvmaze.com/shows/${showId}/seasons`
   const { data, error, loading } = useFetch<SeasonInfo[]>(url)
-  const list = data && data.map(buildSeason) || []
+  const list: Season[] = data && data.map(buildSeason) || []
   const response = { data: list, error, loading }
   return response  
 }

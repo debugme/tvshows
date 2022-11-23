@@ -2,7 +2,7 @@ export type Nullable<T> = T | null
 
 export type ResponseValue = {
   isLoading: boolean,
-  failure: unknown  
+  failure: Nullable<Error>  
 }
 
 export type ShowItem = {

@@ -4,7 +4,7 @@ import { Nullable } from "../types"
 
 export function useFetch<T>(url: string) {
   const [data, setData] = useState<Nullable<T>>(null)
-  const [error, setError] = useState<unknown>(null)
+  const [error, setError] = useState<Nullable<Error>>(null)
   const [loading, setLoading] = useState<boolean>(false)
 
   const fetcher = async () => {
@@ -16,7 +16,7 @@ export function useFetch<T>(url: string) {
       const json = await response.json()
       setData(json)
     } catch(error) {      
-      setError(error)
+      setError(error as Error)
     } finally {
       setLoading(false)
     }

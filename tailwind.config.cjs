@@ -20,7 +20,7 @@ module.exports = {
         colors: {
           "header-fg": "rgb(148 163 184)",
           "header-bg": "rgb(51 65 85)",
-          "header-avatar": "rgb(180 83 9)",
+          "header-avatar": "rgb(202 138 4)",
           "footer-fgi": "rgb(100 116 139)",
           "footer-bg": "rgb(51 65 85)",
           "footer-fga": "rgb(202 138 4)",

@@ -20,6 +20,7 @@ module.exports = {
         colors: {
           "header-fg": "rgb(148 163 184)",
           "header-bg": "rgb(51 65 85)",
+          "header-avatar": "rgb(180 83 9)",
           "footer-fgi": "rgb(100 116 139)",
           "footer-bg": "rgb(51 65 85)",
           "footer-fga": "rgb(202 138 4)",
@@ -37,7 +38,6 @@ module.exports = {
           "search-fg": "rgb(71 85 105)",
           "spinner-fg":"rgb(51 65 85)",
           "spinner-bg":"rgb(241 245 249)",
-          
           "chip-fg":"rgb(241 245 249)",
           "chip-bg":"rgb(148 163 184)",
           "show-1":"rgb(71 85 105)",
@@ -60,46 +60,10 @@ module.exports = {
     },    
     themes: [
       {
-        name: "cartoon",
+        name: "twilight",
         extend: {
           colors: {
-            'header-fg': "#94a3b8",
-            'header-bg': "#f8fafc",
-            'footer-fgi': "#94a3b8",
-            'footer-bg': "#f8fafc",
-            'footer-fga': "#475569",
-            'main-fg': "#f8fafc",
-            "message-bg": "#e2e8f0",
-            "message-fg": "#64748b",
-            "tag-bg": "#e2e8f0",
-            "tag-fg": "#64748b",
-            "heading-fg": "#94a3b8",
-            "search-icon-fg": "#94a3b8",
-            "search-placeholder-fg": "#94a3b8",
-            "search-selection-bg": "orange",
-            "search-bg": "#cbd5e1",
-            "search-focus-outline": "#94a3b8",
-            "search-fg": "#475569",
-            "spinner-fg":"#94a3b8",
-            "spinner-bg":"#cbd5e1",
-            "chip-fg":"#475569",
-
-            "chip-bg":"#e2e8f0",
-            "show-1":"violet",
-            "show-2":"purple",    
-            "show-3":"blue",
-            "cast-1":"yellow",
-            "cast-2":"orange",
-            "cast-3":"red",         
-            "back-icon": "#94a3b8",
-            "back-2": "#94a3b8",     
-            "season-1": "pink",
-            "season-2": "#e2e8f0",
-            "summary-1": "yellow",
-            "summary-2": "orange",
-            "summary-3": "#e2e8f0",
-            "summary-4": "green",                                                        
-            "summary-5": "brown",                                                        
+            /* Overide colors from the default theme in here */
           }
         }        
       }

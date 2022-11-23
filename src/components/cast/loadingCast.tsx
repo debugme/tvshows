@@ -2,7 +2,7 @@ import Skeleton from "react-loading-skeleton";
 
 export const LoadingCast = () => {
   return (
-    <section className="py-6 w-[210px] h-[295px] rounded-lg bg-cast-3 flex flex-col justify-start items-center">
+    <section className="py-6 w-infoCardWidth h-infoCardHeight rounded-lg bg-cast-3 flex flex-col justify-start items-center">
       <Skeleton
         className="w-32 h-32"
         circle

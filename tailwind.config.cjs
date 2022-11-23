@@ -55,6 +55,10 @@ module.exports = {
           "summary-3": "rgb(226 232 240)",
           "summary-4": "rgb(51 65 85)",
           "summary-5": "rgb(148 163 184)",
+        },
+        spacing: {
+          "infoCardWidth": "210px",
+          "infoCardHeight": "295px",
         }
       }
     },    
@@ -63,7 +67,7 @@ module.exports = {
         name: "twilight",
         extend: {
           colors: {
-            /* Overide colors from the default theme in here */
+            /* Overide options from the default theme in here */
           }
         }        
       }

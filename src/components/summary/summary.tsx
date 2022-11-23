@@ -12,8 +12,8 @@ export type CoverArtProps = {
 export const CoverArt: FC<CoverArtProps> = (props) => {
   const { name, image } = props
   return (image
-    ? <LazyLoadImage effect="blur" className="rounded-lg min-w-[210px]" src={image} alt={name} loading="lazy" width={210} height={295} />
-    : <article className="rounded-lg grid place-content-center bg-summary-1 w-[210px] h-[295px]">
+    ? <LazyLoadImage effect="blur" className="rounded-lg min-w-infoCardWidth h-infoCardHeight" src={image} alt={name} loading="lazy" />
+    : <article className="rounded-lg grid place-content-center bg-summary-1 w-infoCardWidth h-infoCardHeight">
         <h2 className="rounded-lg text-5xl text-summary-2">?</h2>
       </article>
   )

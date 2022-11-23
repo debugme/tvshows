@@ -6,7 +6,7 @@ import { Show } from "../../types"
 import { ChipList } from ".."
 
 export const BlankCard = () => (
-  <article className="cursor-pointer rounded-lg grid place-content-center bg-show-1 w-80 h-80 hover:drop-shadow-2xl">
+  <article className="cursor-pointer rounded-lg grid place-content-center bg-show-1 w-80 h-80">
     <h2 className="rounded-lg text-5xl text-show-2">?</h2>
   </article>
 )
@@ -20,7 +20,7 @@ export const ImageCard: FC<ImageCardProps> = (props) => {
   const { name, image } = props
   return (
     image
-      ? <LazyLoadImage effect="blur" className="cursor-pointer rounded-lg object-cover object-top w-80 h-80 hover:drop-shadow-2xl" src={image} loading="lazy" alt={name} />
+      ? <LazyLoadImage effect="blur" className="cursor-pointer rounded-lg object-cover object-top w-80 h-80" src={image} loading="lazy" alt={name} />
       : <BlankCard />
   )
 }

@@ -17,17 +17,17 @@ module.exports = {
           season: "repeat(auto-fill, 210px)"
         },
         colors: {
-          "fgc-1": "rgb(253 224 71)",
-          "fgc-2": "rgb(250 204 21)",
-          "fgc-3": "rgb(202 138 4)",
-          "fgc-4": "rgb(133 77 14)",
-          "bgc-1": "rgb(241 245 249)",
-          "bgc-2": "rgb(226 232 240)",
-          "bgc-3": "rgb(203 213 225)",
-          "bgc-4": "rgb(148 163 184)",
-          "bgc-5": "rgb(100 116 139)",
-          "bgc-6": "rgb(71 85 105)",
-          "bgc-7": "rgb(51 65 85)",
+          "fgc-1": "#fde047",     // yellow-300 
+          "fgc-2": "#facc15",     // yellow-400 
+          "fgc-3": "#ca8a04",     // yellow-600 
+          "fgc-4": "#854d0e",     // yellow-800 
+          "bgc-1": "#f8fafc",     // slate-50 
+          "bgc-2": "#e2e8f0",     // slate-200 
+          "bgc-3": "#cbd5e1",     // slate-300 
+          "bgc-4": "#94a3b8",     // slate-400 
+          "bgc-5": "#64748b",     // slate-500 
+          "bgc-6": "#475569",     // slate-600 
+          "bgc-7": "#334155",     // slate-700 
         },
         spacing: {
           "infoCardWidth": "210px",

@@ -13,8 +13,8 @@ export const CoverArt: FC<CoverArtProps> = (props) => {
   const { name, image } = props
   return (image
     ? <LazyLoadImage effect="blur" className="rounded-lg min-w-infoCardWidth h-infoCardHeight" src={image} alt={name} loading="lazy" />
-    : <article className="rounded-lg grid place-content-center bg-summary-1 w-infoCardWidth h-infoCardHeight">
-        <h2 className="rounded-lg text-5xl text-summary-2">?</h2>
+    : <article className="rounded-lg grid place-content-center bg-bgc-6 w-infoCardWidth h-infoCardHeight">
+        <h2 className="rounded-lg text-5xl text-bgc-4">?</h2>
       </article>
   )
 }
@@ -47,11 +47,11 @@ export const Summary: FC<SummaryProps> = (props) => {
             </figure>
           </div>
           <div className="basis-0 flex-grow min-w-[60%]">
-            <section className="p-4 bg-summary-3 rounded-lg basis-1 min-h-[140px]">
+            <section className="p-4 bg-bgc-2 rounded-lg basis-1 min-h-[140px]">
               <figcaption className="mb-3 my-2 uppercase">
                 <Chip text={name} tooltip={name} />
               </figcaption>
-              <summary className="text-slate-700 first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-summary-5" dangerouslySetInnerHTML={summaryText} />
+              <summary className="text-slate-700 first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-bold first-letter:text-bgc-4" dangerouslySetInnerHTML={summaryText} />
             </section>
           </div>
 

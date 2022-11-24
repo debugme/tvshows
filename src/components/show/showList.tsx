@@ -22,7 +22,7 @@ export const ShowList: FC<ShowListProps> = (props) => {
 
   return (
     <Fragment>
-      <h2 className="block text-3xl text-heading-fg mt-10">Results</h2>
+      <h2 className="block text-3xl text-bgc-6 mt-10">Results</h2>
       <section className="mt-8 grid gap-14 justify-around grid-cols-home">
         {cardList}
       </section>

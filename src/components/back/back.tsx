@@ -5,8 +5,8 @@ export const Back = () => {
   return (
     <nav>
       <Link to="/">
-        <div className="border relative h-12 w-12 rounded-full border-bgc-5">
-          <BackIcon className="absolute top-[12px] left-[10px] h-6 inline-block text-bgc-6" />
+        <div className="border relative h-12 w-12 rounded-full border-secondary-500">
+          <BackIcon className="absolute top-[12px] left-[10px] h-6 inline-block text-secondary-600" />
         </div>
       </Link>
     </nav>

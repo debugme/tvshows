@@ -6,7 +6,7 @@ export const LoadingCastList = () => {
   return (
     <section className="col-span-4 mt-8">
       <header>
-        <h2 className="text-3xl text-bgc-6">Cast</h2>
+        <h2 className="text-3xl text-secondary-600">Cast</h2>
       </header>
       <main className="mt-10 grid gap-14 justify-around grid-cols-cast">
         {loadingCastList}

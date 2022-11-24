@@ -6,8 +6,8 @@ import { Show } from "../../types"
 import { ChipList } from ".."
 
 export const BlankCard = () => (
-  <article className="cursor-pointer rounded-lg grid place-content-center bg-bgc-6 w-80 h-80">
-    <h2 className="rounded-lg text-5xl text-bgc-4">?</h2>
+  <article className="cursor-pointer rounded-lg grid place-content-center bg-secondary-600 w-80 h-80">
+    <h2 className="rounded-lg text-5xl text-secondary-400">?</h2>
   </article>
 )
 

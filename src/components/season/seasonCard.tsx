@@ -12,8 +12,8 @@ export const SeasonCard: FC<SeasonCardProps> = (props) => {
     <figure className="rounded-lg">
       {image
         ? <LazyLoadImage effect="blur" className="rounded-lg w-infoCardWidth h-infoCardHeight" src={image} loading="lazy" alt={name} />
-        : <article className="rounded-lg grid place-content-center bg-bgc-6 w-infoCardWidth h-infoCardHeight">
-          <h2 className="rounded-lg text-5xl text-bgc-4">?</h2>
+        : <article className="rounded-lg grid place-content-center bg-secondary-600 w-infoCardWidth h-infoCardHeight">
+          <h2 className="rounded-lg text-5xl text-secondary-400">?</h2>
         </article>
       }
       <figcaption className="flex px-1 py-1 rounded-lg mt-2">

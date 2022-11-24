@@ -30,7 +30,7 @@ export const SeasonList: FC<SeasonListProps> = (props) => {
   return (
     <section className="mt-8">
       <header>
-        <h2 className="text-3xl text-bgc-6">Seasons</h2>
+        <h2 className="text-3xl text-secondary-600">Seasons</h2>
       </header>
       <main className="pl-20 mt-10 grid gap-14 justify-between grid-cols-season">
         {cardList}

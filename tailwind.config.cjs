@@ -17,12 +17,13 @@ module.exports = {
           season: "repeat(auto-fill, 210px)"
         },
         colors: {
+
           "primary": {
-            300: "#fde047",
-            400: "#facc15",
-            600: "#ca8a04",
-            800: "#854d0e",
-          },
+            300: "#fdba74",
+            400: "#fb923c",
+            600: "#ea580c",
+            800: "#9a3412",
+          },          
           "secondary": {
             50: "#f8fafc",
             200: "#e2e8f0",
@@ -41,14 +42,14 @@ module.exports = {
     },
     themes: [
       {
-        name: "twilight",
+        name: "retro",
         extend: {
           colors: {
             "primary": {
-              300: "#fdba74",
-              400: "#fb923c",
-              600: "#ea580c",
-              800: "#9a3412",
+              300: "#fde047",
+              400: "#facc15",
+              600: "#ca8a04",
+              800: "#854d0e",
             },
             "secondary": {
               50: "#fafaf9",

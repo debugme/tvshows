@@ -44,7 +44,21 @@ module.exports = {
         name: "twilight",
         extend: {
           colors: {
-            /* Overide options from the default theme in here */
+            "primary": {
+              300: "#fdba74",
+              400: "#fb923c",
+              600: "#ea580c",
+              800: "#9a3412",
+            },
+            "secondary": {
+              50: "#fafaf9",
+              200: "#e7e5e4",
+              300: "#d6d3d1",
+              400: "#a8a29e",
+              500: "#78716c",
+              600: "#57534e",
+              700: "#44403c",
+            }            
           }
         }
       }

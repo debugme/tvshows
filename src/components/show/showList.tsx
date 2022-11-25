@@ -6,16 +6,17 @@ import { ShowCard, LoadingShowList } from ".."
 export type ShowListProps = {
   showList: Show[]
   isLoading: boolean
+  searchTerm: string
 }
 
 export const ShowList: FC<ShowListProps> = (props) => {
-  const { showList, isLoading } = props
+  const { showList, isLoading, searchTerm } = props
 
-  if (isLoading) {
+  if (isLoading && searchTerm) {
     return <LoadingShowList />
   }
 
-  const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
+  const cardList = showList.map((show) => <ShowCard key={show.id} {...show} searchTerm={searchTerm}/>)
 
   if (cardList.length === 0)
     return null

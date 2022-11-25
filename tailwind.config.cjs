@@ -42,7 +42,7 @@ module.exports = {
     },
     themes: [
       {
-        name: "retro",
+        name: "mocha",
         extend: {
           colors: {
             "primary": {

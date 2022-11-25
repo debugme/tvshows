@@ -12,7 +12,7 @@ export const Home = () => {
         failure={failure}
         resultCount={showList.length}
         />
-      <ShowList showList={showList} isLoading={isLoading} />
+      <ShowList showList={showList} isLoading={isLoading} searchTerm={searchTerm} />
     </section>
   )
 }

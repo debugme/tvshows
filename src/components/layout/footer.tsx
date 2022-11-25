@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react"
 import {
   Cellphone,
   Tablet,
@@ -24,16 +25,26 @@ export const Breakpoints = () => {
   )
 }
 
-export const Footer = () => {
+export const Devices = () => {
   return (
-    <footer className="bg-secondary-700 text-secondary-700 flex justify-end items-center px-6">
-      <section className="flex text-primary-600">
-        <p className="md:hidden">Cellphone</p>
-        <p className="hidden md:block lg:hidden">Tablet</p>
-        <p className="hidden lg:block xl:hidden">Laptop</p>
-        <p className="hidden xl:block">Desktop</p>
-      </section>
-      <Breakpoints />
+    <section className="flex text-primary-600">
+      <p className="md:hidden">Cellphone</p>
+      <p className="hidden md:block lg:hidden">Tablet</p>
+      <p className="hidden lg:block xl:hidden">Laptop</p>
+      <p className="hidden xl:block">Desktop</p>
+    </section>
+  )
+}
+
+export const Footer = () => {
+  const [showInfo, setShowInfo] = useState(true)
+
+  const onClick = useMemo(() => () => setShowInfo(showInfo => !showInfo), [])
+
+  return (
+    <footer className="bg-secondary-700 text-secondary-700 flex justify-end items-center px-6 cursor-pointer" onClick={onClick} title="Click to toggle breakpoint information">
+      {showInfo ? <Devices /> : null}
+      {showInfo ? <Breakpoints /> : null}
     </footer>
   )
 }

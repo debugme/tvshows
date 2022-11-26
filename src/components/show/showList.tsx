@@ -16,7 +16,7 @@ export const ShowList: FC<ShowListProps> = (props) => {
     return <LoadingShowList />
   }
 
-  const cardList = showList.map((show) => <ShowCard key={show.id} {...show} searchTerm={searchTerm}/>)
+  const cardList = showList.map((show) => <ShowCard key={show.id} {...show} />)
 
   if (cardList.length === 0)
     return null
